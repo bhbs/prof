@@ -1,0 +1,26 @@
+{
+  "name": "prof",
+  "version": "1.0.0",
+  "description": "[about me](https://mima.cf)",
+  "main": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "testcafe chrome test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhbs/prof.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhbs/prof/issues"
+  },
+  "homepage": "https://github.com/bhbs/prof#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "testcafe": "^1.8.8"
+  }
+}
