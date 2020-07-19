@@ -12,3 +12,8 @@ jobs:
         uses: DevExpress/testcafe-action@latest
         with:
             args: "chrome:headless"
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: screenshots
