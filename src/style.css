@@ -1,0 +1,130 @@
+body {
+  padding: 100px 0;
+  background: black;
+  font: bold 16px "Yu Gothic", YuGothic, sans-serif;
+  font-feature-settings: "palt";
+  letter-spacing: 0.08em;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  margin: 48px auto;
+  flex-basis: calc(90% - 140px);
+  background: white;
+  border-radius: 0.5px;
+}
+
+section {
+  flex-basis: 100%;
+  box-sizing: border-box;
+  padding: 5px 40px;
+}
+
+h1,
+h2,
+p,
+li {
+  position: relative;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin: 0 0 40px;
+}
+
+h2 {
+  margin: 20px 0 40px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+@media (min-width: 800px) {
+  main {
+    max-width: calc(32% + 160px);
+  }
+
+  h2 {
+    text-indent: 0;
+  }
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  animation-name: glitch;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-iteration-count: infinite;
+}
+
+.glitch:after {
+  animation-direction: reverse;
+  color: #f0f;
+  z-index: -2;
+}
+
+.glitch:before {
+  color: #0ff;
+  z-index: -1;
+}
+
+@keyframes glitch {
+  from {
+    transform: translate(0);
+  }
+
+  46% {
+    transform: translate(0);
+  }
+
+  48% {
+    transform: translate(-3px, 3px);
+  }
+
+  50% {
+    transform: translate(-3px, -3px);
+  }
+
+  52% {
+    transform: translate(3px, 3px);
+  }
+
+  54% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
